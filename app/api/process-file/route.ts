@@ -16,6 +16,22 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Valida extensão do arquivo
+    if (!file.name.toLowerCase().endsWith('.csv')) {
+      return NextResponse.json(
+        { error: 'Apenas arquivos .csv são permitidos.' },
+        { status: 400 },
+      );
+    }
+
+    // Se quiser validar o MIME também:
+    if (file.type !== 'text/csv') {
+      return NextResponse.json(
+        { error: 'Arquivo inválido. Envie um CSV.' },
+        { status: 400 },
+      );
+    }
+
     const text = await file.text();
 
     // Parse CSV
