@@ -117,10 +117,10 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50 p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-2 text-gray-800">
-          🗺️ Otimizador de Rotas
+          🗺️ Otimizador de Rotas - versão beta (em teste)
         </h1>
         <p className="text-gray-600 mb-8">
-          Encontre o caminho mais curto para visitar todas as empresas
+          Encontre o caminho mais curto para visitar cooperados
         </p>
 
         <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -167,7 +167,7 @@ export default function Home() {
               onClick={getUserLocation}
               className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition"
             >
-              📡 Obter Localização
+              📡 Clique para carregar localização
             </button>
             {userLocation && (
               <p className="mt-3 text-sm text-green-600 font-medium">
@@ -181,7 +181,7 @@ export default function Home() {
         {/* Otimizar */}
         <div className="bg-white border rounded-lg shadow-sm p-6 mb-8">
           <h2 className="text-xl font-semibold mb-3">
-            🚀 3. Calcular Rota Otimizada
+            🚀 3. Calcular melhor rota
           </h2>
           <button
             onClick={handleOptimize}
@@ -236,7 +236,7 @@ export default function Home() {
         {/* Mapa */}
         {rota && userLocation && (
           <div className="bg-white border rounded-lg shadow-sm p-6">
-            <h2 className="text-2xl font-bold mb-4">🗺️ Visualização da Rota</h2>
+            <h2 className="text-2xl font-bold mb-4">🗺️ Rota no mapa </h2>
             <MapComponent
               userLocation={userLocation}
               empresas={rota.empresas}
