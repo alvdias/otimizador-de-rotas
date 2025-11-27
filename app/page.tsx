@@ -243,9 +243,8 @@ export default function Home() {
             />
           </div>
         )}
+        <p className="text-gray-600 mb-8">Desenvolvido por André Dias</p>
       </div>
-
-      <p className="text-gray-600 mb-8">Desenvolvido por André Dias</p>
     </main>
   );
 }
