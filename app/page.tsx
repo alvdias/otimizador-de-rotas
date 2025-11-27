@@ -244,6 +244,8 @@ export default function Home() {
           </div>
         )}
       </div>
+
+      <p className="text-gray-600 mb-8">Desenvolvido por André Dias</p>
     </main>
   );
 }
