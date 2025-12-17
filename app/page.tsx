@@ -244,7 +244,7 @@ export default function Home() {
           </div>
         )}
         <p className="text-gray-600 mb-8 text-right">
-          Desenvolvido por André Dias
+          Desenvolvido por André Dias (andre.dias@cresol.com.br)
         </p>
       </div>
     </main>
